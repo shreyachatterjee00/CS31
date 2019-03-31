@@ -1,5 +1,4 @@
 Shreya Chatterjee
-UCLA ID: 305124409
 
 a. The obstacle I ran into was not being able to get my code on the G++ server. Eventually, I realized that I was typing in erroneous commands and was able to run it on the server. 
 
