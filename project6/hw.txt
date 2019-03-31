@@ -1,0 +1,148 @@
+Shreya Chatterjee
+
+Problem 1: 
+
+a. Bugs: The program prints 10 1 0. This is mainly because within the while loop, 'ptr' starts at index 2 instead of index 4 like it should. Also, the code should be changed from "ptr >= arr" to "ptr > arr" because the loop is looping one time too many. 
+
+Revised code: 
+int main()
+{
+    int arr[4] = { 0, 1, 2, 3 };
+    int* ptr = arr;
+    
+    *ptr = arr[ 1 ];               // set arr[0] to 1
+    *(ptr + 1) = arr[ 0 ] * 10;    // set arr[1] to 10
+    ptr += 2;
+    ptr[0] = arr[ 1 ] * 10;        // set arr[2] to 100
+    ptr[1] = 1000;                 // set arr[3] to 1000
+    
+    ptr +=2;                         //changed ptr to point to index 4
+    
+    while (ptr > arr)               //changed from 'greater than or equal to' to just 'greater than'
+    {
+        ptr--;
+        cout << " " << *ptr;        
+    }
+    cout << endl;
+    return( 0 );
+} 
+
+
+b. This function will product the correct result because the pointer is being passed by value and not by reference. Therefore, though the pointer is changed in the function, the rest of the program does not recognize that change. To fix this, just add an ampersand to the pointer variable in the function declaration, like this: 
+
+void findLastZero(int arr[], int n, int* & p) { 
+//function
+}
+
+c. This will not work because the pointer "p" has not been initialized, so the computer cannot assign value1 or value2 to *resultPtr in the function biggest. I fixed it by assigning the pointer "p" to the address of a variable that is equal to 0, so the pointer points to the value 0 and is initialized. 
+
+int main()
+{
+    int* p;
+    int i = 0;              //declare variable i
+    p = &i;                 //assign 'p' to address of i
+    biggest(15, 20, p);
+    cout << "The biggest value is " << *p << endl;
+    return( 0 );
+}
+
+d. The problem with this implementation of the function "match" is that the characters of the arrays are not being compared. For example, the line "if (str1 != str2)" is meant to compare the individual elements of the array, but it does not. To fix this, I created a variable called "i" and used it to find the elements at each index of the arrays and test if they were equal to each other. Additionally, I amended the if statement defining result. The code I wrote tests if the next element in each array is '\0', because c-strings always have an extra 0 at the end, so this would mean that both strings are over. 
+
+bool match(const char str1[], const char str2[])
+{
+    bool result = true;
+    int i = 0;
+    while (str1[i] != '\0'  &&  str2[i] != '\0')  // zero bytes at ends
+    {
+        if (str1[i] != str2[i])  // compare corresponding characters
+        {
+            result = false;
+            break;
+        }
+        i++;
+    }
+    if (result)
+    {
+        if (str1[i] == '\0' && str2[i] == '\0') { //if the next character is 0, both arrays are over
+            result = true;
+        }
+        else {
+            result = false;
+        }
+    }
+    return( result );
+}
+
+e. The function "computeFibonacciSequence" is attempting to return the entire array "arr" so that the main function can assign the array to "ptr" and can print all elements of the array. However, arrays cannot ever be returned, so even though in the function "computeFibonacciSequence" the array "arr" has the correct values of the sequence, the correct values are not returned and so the print statements in the main function do not work as intended and the correct fibonacci sequence is not printed. 
+
+Problem 2: 
+
+1. f
+2. g
+3. a
+4. b
+5. d
+6. c
+7. b 
+8. e
+9. h
+
+Problem 3: 
+The output is: 
+
+diff = 1
+4
+79
+5
+9
+-1
+19
+
+I have explained why this is outputted below, with the code given and my own comments explaining the affect of it.
+
+*ptr = minimart(array, & array[2]); //*ptr = 4, ptr points towards index 2, because 4 is in that position
+
+ptr[1] = 9; // next value, so index 3, gets changed to 9
+
+ptr+=2; // ptr points towards index 4
+
+*ptr = -1 //index 4 is given the value -1
+
+*(array + 1) = 79 //array refers to the first value in the array, array+1 = index 1, which gets changed to 79
+
+so the array currently is: 
+5
+79
+4
+9
+-1
+19
+
+cout << "diff=" << &array[5] - ptr << endl; //ptr currently points to the element in index 4, and &array[5] is the address of the element in index 5, so there should be a difference of 1 between the two addresses stored in memory. so, "diff = 1" is printed. 
+
+swap1(&array[0], &array[1]); //switches the addresses of array[0] and array[1], no affect on the actual array
+
+swap2(&array, &array[2]); //switches values of array[0] and array[2], switches the actual array
+
+so the array currently is: 
+4
+79
+5
+9
+-1
+19
+
+This array is then printed, because of the for loop. 
+
+4. 
+void deleteDigits(char * c) {
+    while (*c != '\0') {
+	if (*c == '0' || * c == '1' || *c == '2' || *c == '3' || *c == '4' || *c == '5' || *c == '6' || *c == '7' || *c == '8' || *c == '9') {
+            * c = ' ';
+        }
+        c++;
+    }
+}
+
+
+
