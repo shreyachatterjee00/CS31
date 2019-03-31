@@ -1,5 +1,4 @@
 Shreya Chatterjee
-UCLA ID: 305124409
 
 a. The only obstacle I had to overcome was the fact that I wrote my "hasDuplicates" function wrong. I had written it in such a way that it was always true, and after debugging, I figured out how to fix my function. 
 
