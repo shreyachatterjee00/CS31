@@ -1,0 +1,70 @@
+Shreya Chatterjee
+UCLA ID: 305124409
+
+a. The only obstacle I had to overcome was understanding how all the classes fit together and which header files had to be imported into which classes. I originally imported too many files in each class, which caused the program to not build. 
+
+b. Test Data: 
+
+Ticket t( "Pavillion Row 13", 405, "Dodgers vs. Brewers", "Dodger Stadium", 150.00, Ticket::MOVIE, "August 1, 7:30PM" );
+BoxOffice b;
+
+1. 
+Input: t.getRow();
+Output: "Pavillion Row 13"
+Reason: Make sure "get" functions work. 
+
+2. 
+Input: t.getPrice();
+Output: 150
+Reason: Make sure "get" functions work. 
+
+3. 
+Input: t.getDayTime();
+Output: "August 1, 7:30PM"
+Reason: Make sure "get" functions work. 
+
+t = b.buyRoyceHallStaffTicket("Orchestra row 12", 67, "Football Game", Ticket::KIND::ATHLETICGAME, "8:30PM");
+
+4. 
+Input: t.getKind();
+Output: ATHLETICGAME
+Reason: Make sure "get" function works for Staff Tickets.
+
+5. 
+Input: t.getPrice();
+Output: 130
+Reason: Make sure pricing algorithm works for Staff Tickets. 
+
+6.
+Input: t.getVenue();
+Output: "Royce Hall"
+Reason: Make sure venue is set to Royce Hall for Staff Tickets. 
+
+t = b.buyRoyceHallStudentTicket("Orchestra row 12", 67, "TedxUCLA", Ticket::KIND::OTHER, "8:30AM");
+
+7. 
+Input: t.getPrice();
+Output: 50
+Reason: Test price algorithm with Student Ticket, Orchestra Seating, AM time.
+
+t = b.buyRoyceHallStudentTicket("Balcony row 12", 67, "TedxUCLA", Ticket::KIND::OTHER, "8:30AM");
+
+8.
+Input: t.getPrice();
+Output: 10
+Reason: Test price algorithm with Student Ticket, Balcony seating, AM time.
+
+t = b.buyRoyceHallStudentTicket("Orchestra row 12", 67, "TedxUCLA", Ticket::KIND::OTHER, "8:30PM");
+
+9. 
+Input: t.getPrice();
+Output: 80
+Reason: Test price algorithm with Student Ticket, Orchestra seating, PM time.
+
+t = b.buyRoyceHallStudentTicket("Balcony row 12", 67, "TedxUCLA", Ticket::KIND::OTHER, "8:30PM");
+
+10. 
+Input: t.getPrice();
+Output: 25
+Reason: Test price algorithm with Student Ticket, Balcony seating, PM time. 
+
