@@ -1,4 +1,4 @@
-//PROVIDED BY PROFESSOR
+//PROVIDED BY PROFESSOR, NOT MY CODE
 //  Project5Helper.cpp
 //  Project5Helper
 //
