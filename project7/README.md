@@ -1,1 +1,1 @@
-for project 7, we were given these classes with TODO comments (that have now been deleted and replaced with functional commnents.)
+for project 7, we were given these classes in varying levels of completion and asked to complete them, using TODO comments to delineate where/what to code. those comments have been replaced with regular comments for explanation.
