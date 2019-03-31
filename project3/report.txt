@@ -1,5 +1,4 @@
 Shreya Chatterjee
-ID: 305124409
 
 a. The main obstacle I overcame was figuring out how to design the functions. Once I figured that out, I was able to write and debug them. 
 
@@ -36,3 +35,4 @@ c.
 10. string: ":00 0 s/m 0 m 0"
 	output: all functions return -1, not a valid string
 	reason: test all 0s
+
