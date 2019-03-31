@@ -1,5 +1,4 @@
 Shreya Chatterjee
-UCLA ID: 305124409
 
 a. The only obstacle I had to overcome was understanding how all the classes fit together and which header files had to be imported into which classes. I originally imported too many files in each class, which caused the program to not build. 
 
