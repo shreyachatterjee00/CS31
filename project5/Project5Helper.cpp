@@ -1,4 +1,4 @@
-//
+//PROVIDED BY PROFESSOR
 //  Project5Helper.cpp
 //  Project5Helper
 //
