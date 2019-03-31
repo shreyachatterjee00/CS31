@@ -1,0 +1,11 @@
+Shreya Chatterjee
+CS31
+
+Input in Step 5:
+I tested the integer 10 for all three parties: Democratic, Republican, and Independent. This produced an incorrect output: that the control goes to the Democrats. However, this is not true because in the example I tested, control should not go to the Democrats if the Democrats and Republicans hold an equal percentage of seats. Similarly, I used 10 for both Republicans and Democrats, and 20 for Independents. Again, the computer did not output the correct solution.
+
+Step 6: Logic Error
+For the logic error, I took the variable 'democraticSeats' out of the equation for the variable 'total.' When I tested this with 10 Democratic seats, 5 Republican seats, and 2 Independent seats, I got the nonsensical result of 71.4% Republicans, 142.9% Democrats, and 28.6% Independents. This is clearly wrong, and it is because the Democratic seats were not added to the total seats, so the percentages were thrown off. 
+
+Step 7: Compiler Errors
+For the first compiler error, I took out a semicolon at the end of a line. I got the message "Expected ; after expression." The program did not build. For the second error, I changed the '<<' after "cout" to '>>'. This gave me the message "Invalid operands to binary expression." Again, the program did not build. 
