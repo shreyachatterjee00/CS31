@@ -1,4 +1,4 @@
-//
+//PROVIDED MY PROFESSOR, NOT MY CODE
 //  Project5Helper.h
 //  Project5Helper
 //
